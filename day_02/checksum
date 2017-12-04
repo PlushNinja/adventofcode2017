@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+puts IO.readlines('input').map { |line|
+  -line.split.map(&:to_i).minmax.reduce(&:-)
+}.reduce(&:+)
