@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+input = IO.read('input').chomp.split ''
+input << input[0]
+sum = 0
+input.each_cons(2) { |a, b|
+  sum += a.to_i if a == b
+}
+puts sum
